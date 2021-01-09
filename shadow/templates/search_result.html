@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影子导航 - nav.shadowq.com</title>
+    <link rel="stylesheet" href="/static/css/search_index.css">
+    <link rel="stylesheet" href="/static/bs_css/bootstrap.css">
+    <script src="/static/js/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="body">
+    <form class="form-inline" method="get" action="/search/">
+        <div class="form-group">
+            <input type="text" class="form-control" name="kw" value="{{ keywords }}">
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm" >搜索</button>
+    </form>
+    {% for d in data %}
+        <div>
+            <ul class="data" type="none">
+                <li>
+                    <a href="javascript:void(0);" onclick="f('{{ d.id }}')">
+                        {{ d.detail_name }}</a>
+                </li>
+                {% if d.src != "" %}
+                    <img src="{{ d.src }}" style="width: 100px;height: 100px">
+                {% endif %}
+                <li>{{ d.content }}</li>
+                <button onclick="parse_step('{{ d.id }}',1)">赞</button>
+                <button onclick="parse_step('{{ d.id }}',0)">踩</button>
+                <a href="/complaint/?id={{ d.id }}">投诉</a>
+            </ul>
+        </div>
+    {% endfor %}
+    <script>
+        function f(href_id) {
+            $.ajax({
+                url: "/save_url/",
+                data: {href_id: href_id},
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 1) {
+                        window.open(data.href)
+                    } else {
+                        console.log("失败");
+                    }
+                }
+            })
+        }
+
+        function parse_step(href_id, action) {
+            $.ajax({
+                url: "/praise_step/",
+                data: {href_id: href_id, action: action},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 1) {
+                        console.log("成功");
+                    } else {
+                        console.log("失败");
+                    }
+                }
+            })
+        }
+    </script>
+</div>
+</body>
+</html>

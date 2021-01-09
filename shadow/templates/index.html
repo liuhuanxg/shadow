@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /> 
+  <meta http-equiv="Cache-Control" content="no-siteapp" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-touch-fullscreen" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+  <meta name="full-screen" content="yes" />
+  <!--UC强制全屏--> 
+  <meta name="browsermode" content="application" />
+  <!--UC应用模式--> 
+  <meta name="x5-fullscreen" content="true" />
+  <!--QQ强制全屏--> 
+  <meta name="x5-page-mode" content="app" />
+  <!--QQ应用模式--> 
+  <title>影子导航 - nav.shadowq.com</title> 
+  <meta name="keywords" content="影子导航,影子搜索,影子搜索导航">
+  <meta name="description" content="简约的搜索导航，提供给你一个舒适美观的开始页面">
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" /> 
+  <link href="/static/css/style.css" rel="stylesheet" /> 
+  <link href="/static/css/sousuo.css" rel="stylesheet" />
+  <script src="/static/js/jquery.min.js"></script> 
+  <script src="/static/js/right.js"></script> 
+ </head> 
+ <body>
+ <div>
+     <a href="/register/">注册</a>
+     <a href="/login/">登录</a>
+ </div>
+  <div id="menu">
+   <i></i>
+  </div>
+  <div class="list closed"> 
+   <ul>  
+    <li class="title">常用</li> 
+	<li><a style="text-align: center" href="https://shadowq.com/" target="_blank">影子论坛</a></li> 
+    <li><a style="text-align: center" href="https://music.shadowq.com/" target="_blank">在线音乐</a></li> 
+    <li><a style="text-align: center" href="https://translate.google.cn/" target="_blank">谷歌翻译</a></li>
+	<li><a style="text-align: center" href="https://shadowq.com/tools/wallpaper/" target="_blank">壁纸</a></li>
+	<li><a style="text-align: center" href="https://earth.google.com/web" target="_blank">谷歌地球</a></li>
+	<li><a style="text-align: center" href="https://ue.818ps.com/clip/" target="_blank">在线抠图</a></li>
+	<li><a style="text-align: center" href="https://mubu.com/" target="_blank">幕布</a></li>
+	<li><a style="text-align: center" href="https://tuchong.com/" target="_blank">图虫</a></li>
+	<li><a style="text-align: center" href="https://modao.cc" target="_blank">墨刀</a></li>
+    <!----> 
+    <li class="title">娱乐</li> 
+    <li><a style="text-align: center" href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+    <!----> 
+    <li class="title">论坛、社交</li> 
+    <li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+    <!----> 
+    <li class="title">视频媒体</li> 
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+	<li><a style="text-align: center" href="#" target="_blank">待添加</a></li>
+    <!----> 
+   </ul> 
+  </div> 
+  <div id="search" class="s-search">
+	   <div id="search-list" class="hide-type-list">
+			<div class="search-group group-a">
+			 <span class="type-text">搜索</span>
+				 <ul class="search-type">
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-search" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下" />
+						  <label for="type-search"><span>百度</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-google" value="https://www.google.com/search?q=" data-placeholder="google搜索" />
+						  <label for="type-google"><span>google</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-doge" value="https://www.dogedoge.com/results?q=" data-placeholder="doge搜索" />
+						  <label for="type-doge"><span>doge</span></label>
+					  </li>
+					   <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-magi" value="https://magi.com/search?q=" data-placeholder="magi搜索" />
+						  <label for="type-magi"><span>magi</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-miji" value="https://mijisou.com/?q=" data-placeholder="秘迹搜索" />
+						  <label for="type-miji"><span>秘迹</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-sogo" value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索" />
+						  <label for="type-sogo"><span>搜狗</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="bing搜索" />
+						  <label for="type-bing"><span>bing</span></label>
+					  </li>
+					  <li>
+						  <input onclick="bw()" hidden="" type="radio" name="type" id="type-360" value="https://www.so.com/s?q=" data-placeholder="360搜索" />
+						  <label for="type-360"><span>好搜</span></label>
+					  </li>
+					  <li>
+					  	  <input onclick="bw()" hidden="" type="radio" name="type" id="type-github" value="https://github.com/search?q=" data-placeholder="github搜索" />
+						  <label for="type-github"><span>github</span></label>
+					  </li>
+				 </ul>
+			</div>
+	   </div>
+		<form action="/search/" method="get" target="_blank" id="super-search-fm">
+		<input type="text" id="search-text" placeholder="输入关键字搜索" style="outline:0"  name="kw"/>
+		<button type="submit">
+			<i>
+			<svg t="1597227708899" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1374" width="100%" height="100%">
+			<path d="M429.4 797.6c-99.3 0-193.6-39.8-263.5-112.2-140.4-145.6-136.1-378.3 9.5-518.6C321 26.4 553.6 30.7 694 176.3c140.4 145.6 136.1 378.2-9.5 518.5-11.2 10.9-29.2 10.6-40.1-0.7-10.9-11.3-10.5-29.2 0.7-40.1 123.1-118.7 126.7-315.4 8-438.4-57.5-59.6-134.8-93.3-217.6-94.8-82-1.6-161.3 29.3-220.9 86.8-59.6 57.5-93.3 134.8-94.8 217.6-1.5 82.8 29.3 161.2 86.8 220.9 66.5 69 159.4 103 255 93.2 15.7-1.8 29.5 9.7 31.1 25.3 1.6 15.6-9.7 29.5-25.3 31.1-12.7 1.2-25.4 1.9-38 1.9z" fill="#ffffff" p-id="1375"></path>
+			<path d="M899.7 925.2c-7.4 0-14.8-2.9-20.4-8.7L675.4 705.1c-10.9-11.3-10.5-29.2 0.7-40.1 11.3-10.8 29.2-10.5 40.1 0.7l203.9 211.5c10.9 11.3 10.5 29.2-0.7 40.1-5.6 5.3-12.7 7.9-19.7 7.9z" fill="#ffffff" p-id="1376"></path><path d="M393.6 684.6c-4.1 0-8.2-0.9-12.2-2.8-14-6.7-20.1-23.4-13.4-37.5 2.2-4.7 23-46.5 66.7-58.1 18.1-4.8 46.5-5.7 80.6 15.9 16.3-26.7 47.3-74.8 99.7-68.8 15.6 1.7 26.7 15.8 25 31.3-1.7 15.6-16 26.8-31.3 25-18.6-1.8-36.9 28.7-45.9 43.5-8.8 14.4-22.2 23.9-36.7 26.9-13.2 2.8-26.3 0.1-37-7.4-15.1-10.7-28.5-14.6-39.5-11.8-15.6 4-27.1 21.4-30.3 27.7-5.1 10.2-15.2 16.1-25.7 16.1z" fill="#ffffff" p-id="1377"></path>
+			</svg>
+			</i>
+		</button>
+{#		<ul id="ul" class="ko"></ul>#}
+		</form>
+
+   <div class="set-check hidden-xs">
+    <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off" />
+   </div>
+  </div> 
+{#  <script type="text/javascript" src="/static/js/ShadowSearch.js"></script>#}
+{#  <script type="text/javascript" src="/static/js/association.js"></script>#}
+  <div class="bgo"></div>
+  <div class="foot">© 2016-2020 by  <a style="color:#999" href="https://shadowq.com">影子论坛</a>All rights reserved.</div>
+ </body>
+</html>
